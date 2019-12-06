@@ -1,0 +1,28 @@
+<p>Je suis connecté {{me.getName()}}</p>
+<table>
+  <tr>
+    <th>Users</th>
+    <th>Messages</th>
+  </tr>
+  <tr>
+    <td>
+      <ul *ngFor="let user of users">
+        <li>{{user.getName()}}</li>
+      </ul>
+    </td>
+    <td id="message-box">
+      <ul *ngFor="let msg of msgs">
+        <li><b><u>{{msg.getSender().getName()}}</u></b> {{msg.getContent()}}</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <form [formGroup]="fg">
+        <input type="text" formControlName="message"><button (click)="sendMsg()">Envoyer le message</button>
+      </form>
+    </td>
+  </tr>
+</table>
+<button (click)="logout()">Deconnexion</button>
+<router-outlet></router-outlet>

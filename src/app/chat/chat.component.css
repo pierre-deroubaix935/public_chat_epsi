@@ -1,0 +1,22 @@
+table{
+  border: solid 1px;
+}
+td{
+  border: solid 1px;
+}
+th{
+  border: solid 1px;
+}
+
+#message-box
+{
+  min-width: 800px;
+  height: 750px;
+  max-height: 750px;
+  overflow-y: scroll;
+}
+
+input[type=text]
+{
+  width:650px;
+}
